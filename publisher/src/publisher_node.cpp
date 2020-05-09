@@ -80,7 +80,7 @@ int main(int argc, char **argv)
   ros::Rate loop_rate(20);
   image_transport::ImageTransport cam(n);
   image_transport::Subscriber sub = cam.subscribe("/usb_cam/image_raw", 1, imageCallback);
-  image_transport::Publisher pub_ = cam.advertise("/traj_output", 1);
+  image_transport::Publisher pub_ = cam.advertise("/image_output/raw", 1);
   
   
   
